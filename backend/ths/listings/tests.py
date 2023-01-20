@@ -33,13 +33,13 @@ class ListingList(APITestCase):
                     "first_name": self.listing_1.first_name,
                     "last_name": self.listing_1.last_name,
                     "pets": [],
-                    "assignment_set": [self.assignment_1.pk],
+                    "assignments": [self.assignment_1.pk],
                 },
                 {
                     "first_name": self.listing_2.first_name,
                     "last_name": self.listing_2.last_name,
                     "pets": [],
-                    "assignment_set": [self.assignment_2.pk],
+                    "assignments": [self.assignment_2.pk],
                 },
             ],
         )

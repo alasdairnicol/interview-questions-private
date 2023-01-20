@@ -13,4 +13,5 @@ class Assignment(models.Model):
         Listing,
         on_delete=models.CASCADE,
         help_text="The listing that this assignment relates to",
+        related_name="assignments",
     )
