@@ -7,4 +7,4 @@ from pets.models import Pet
 class ListingSerializer(serializers.ModelSerializer):
     class Meta:
         model = Listing
-        fields = ['first_name', 'last_name', 'pets', 'assignment_set']
+        fields = ["first_name", "last_name", "pets", "assignment_set"]
