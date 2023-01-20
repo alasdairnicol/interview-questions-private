@@ -1,3 +1,14 @@
 from django.db import models
 
-# Create your models here.
+
+ANIMAL_TYPE_CHOICES = (
+    ('Cat', 'cat'),
+    ('Dog', 'dog'),
+    ('Fish', 'fish'),
+    ('Rabbit', 'rabbit'),
+)
+
+class Pet(models.Model):
+    name = models.CharField(max_length=50)
+    animal_type = models.CharField(max_length=10, choices=ANIMAL_TYPE_CHOICES)
+    description = models.TextField()
