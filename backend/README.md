@@ -19,7 +19,6 @@ Run project
 source venv/bin/activate
 cd ths
 # run migrations to create a local sqlite database
-# there are migrations to create sample data
 ./manage.py migrate
 ./manage.py runserver
 ````
