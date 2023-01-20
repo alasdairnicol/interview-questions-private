@@ -12,16 +12,40 @@ source venv/bin/activate
 pip install -r requirements.txt
 ```
 
+Set up DB
+=========
+
+The following commands create the required database tables in a
+local sqlite db, and load in some sample data.
+
+```
+source venv/bin/activate
+cd ths
+# run migrations
+./manage.py migrate
+# Load sample data
+./manage.py loaddata sampledata.json
+````
+
 Run project
 ===========
 
 ```
 source venv/bin/activate
 cd ths
-# run migrations to create a local sqlite database
-./manage.py migrate
 ./manage.py runserver
 ````
+
+This runs the Django devserver on port 8000.
+
+You can now access the API using curl, e.g.
+
+```
+curl http://localhost:8000/listings/
+```
+
+or go to http://localhost:8000/listings/ in your browser
+
 
 Run test suite
 ==============
